@@ -1,0 +1,7 @@
+<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+  <li *ngFor="let card of cocktailList"
+      class="cursor-pointer transform hover:scale-105 transition duration-300 ease-in-out"
+      (click)="clickCard(card.id)">
+    <app-cocktail-card [cocktail]="card"></app-cocktail-card>
+  </li>
+</ul>

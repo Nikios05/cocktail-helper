@@ -1,0 +1,19 @@
+<div class="flex flex-col gap-1">
+  <div class="flex gap-1">
+    <input type="text"
+           pInputText
+           [ngClass]="{ 'ng-invalid ng-dirty': validError }"
+           [(ngModel)]="searchInput"
+           (ngModelChange)="validError = false"
+           [placeholder]="placeholder"
+           [disabled]="loading"
+           (keydown.enter)="search()">
+
+    <p-button icon="pi {{!loading ? 'pi-search' : 'pi-spin pi-spinner'}}" aria-label="Search"
+              [pTooltip]="tooltipBtn"
+              tooltipPosition="top"
+              (click)="search()" />
+  </div>
+
+  <small *ngIf="validError">Please enter a name to search</small>
+</div>

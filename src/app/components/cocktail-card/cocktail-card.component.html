@@ -1,0 +1,7 @@
+<p-card [style]="{ position: 'relative', overflow: 'hidden' }">
+  <ng-template #header>
+    <img alt="Card" class="w-full" [src]="cocktail.imgUrl" />
+  </ng-template>
+  <ng-template #title>{{ cocktail.name }}</ng-template>
+  <ng-template #subtitle>{{ cocktail.glassType }}</ng-template>
+</p-card>
